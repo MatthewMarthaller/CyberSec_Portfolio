@@ -1,5 +1,5 @@
 # Professional Statement
-***As a dedicated ICT Technician, I bring strong project management, troubleshooting, and customer support skills to the ever-evolving field of cybersecurity. My commitment to helping people fairly and being an endless learner allows me to adapt and innovate effectively. I am passionate about supporting the security goals of organizations by ensuring the safety and well-being of all stakeholders, continuously improving systems to meet their needs.***
+***As a dedicated ICT Technician, I bring strong project management, troubleshooting, and customer support skills to the ever-evolving field of cybersecurity. My commitment to helping people fairly and being an endless learner allows me to adapt and innovate effectively. I am passionate about supporting the security goals of organizations by ensuring the safety and well-being of all stakeholders and continuously improving systems to meet their needs.***
 
 ***
 ## Building the statement
