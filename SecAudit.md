@@ -1,5 +1,5 @@
-# Security Audit
-(***Note: This scenario is based on a fictional company***)
+# Security Audit <br/>
+(***Note: This scenario is based on a fictional company***) <br/>
 **Company Name**: Botium Toys <br/>
 **Location**: United States  <br/>
 **Industry**: Toy Development and Sales  <br/>
