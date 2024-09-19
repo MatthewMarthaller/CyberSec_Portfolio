@@ -49,30 +49,36 @@ Your job is to document the incident in detail, including identifying the networ
 14:25:29.576597 IP greatrecipesforme.com.http > your.machine.56378: Flags [.], ack 74, win 512, options [nop,nop,TS val 3302989649 ecr 3302989649], length 0<br/>
 …<a lot of traffic on the port 80>... <br/>
 ***
-# Security incident report (WIP)
-Section 1: Network Protocols
-During the investigation of the security incident, the following network protocols were identified from the tcpdump log:
-
-DNS (Domain Name System): Used to resolve domain names to IP addresses.
-HTTP (Hypertext Transfer Protocol): Used for web page requests and downloads.
-Section 2: Incident Summary
-Incident Overview:
-A security breach occurred on yummyrecipesforme.com, involving unauthorized access to the admin panel by a former employee. The attacker executed a brute force attack to guess the default administrative password, allowing access to the website's source code.
-
-Details:
-
-Location: The incident took place on the web server of yummyrecipesforme.com.
-Method of Attack: The attacker used a brute force technique to gain access to the admin panel.
-Malicious Activity: JavaScript was injected into the website's code, prompting users to download an executable file containing malware.
-Redirection: Users who ran the file were redirected to a fake site, greatrecipesforme.com, which further compromised their systems.
-Discovery: Customers reported unusual prompts to download files and noticed slow performance on their computers. The issue was confirmed through the analysis of network traffic and website source code.
-Sources of Information:
-
+# Security incident report
+### Section 1: Network Protocols <br/>
+During the investigation of the security incident, the following network protocols were identified from the tcpdump log:<br/>
+DNS (Domain Name System): Used to resolve domain names to IP addresses.<br/>
+HTTP (Hypertext Transfer Protocol): Used for web page requests and downloads.<br/>
+<br/>
+###Section 2: Incident Summary
+##### Incident Summary:
+A former employee executed a brute force attack on the admin account of yummyrecipesforme.com. The attacker used default passwords to gain access to the admin panel, where they embedded malicious JavaScript code into the website. This code prompted users to download a file containing malware, which redirected their browsers to a fake website, greatrecipesforme.com. <br/>
+<br/>
+##### Incident Details: <br/>
+Initial Access: The attacker used a brute force attack to guess the admin password, which was set to a default value. <br/>
+Payload Deployment: Malicious JavaScript was added to the website's source code, prompting visitors to download a file. <br/>
+Execution: The downloaded file contained a script that redirected users to greatrecipesforme.com, which hosted additional malware. <br/>
+Customer Impact: Users reported being prompted to download a file for "free recipes," after which their computers slowed down, indicating malware infection. <br/>
+Response: The website owner was locked out of the admin panel. A cybersecurity team was engaged to investigate. <br/>
+<br/>
+###### Sources of Information:
 Customer complaints to the helpdesk.
 Network traffic analysis using tcpdump.
 Examination of the website's modified source code.
-Section 3: Recommendation for Brute Force Attack Prevention
-Recommended Action: Implement Two-Factor Authentication (2FA)
-
+###### Network Activity:
+DNS Requests: <br/>
+yummyrecipesforme.com resolved to IP 203.0.113.22. <br/>
+greatrecipesforme.com resolved to IP 192.0.2.17. <br/>
+HTTP Requests: <br/>
+Initial HTTP request to yummyrecipesforme.com to access the webpage. <br/>
+Subsequent HTTP request to greatrecipesforme.com after redirection. <br/>
+<br/>
+### Section 3: Recommendation for Brute Force Attack Prevention
+#### Recommended Action: Implement and Mandate Two-Factor Authentication (2FA) for all administrative accounts.
 Justification:
 Two-Factor Authentication adds an additional security layer by requiring not only a password and username but also something that only the user has on them (e.g., a physical token or a mobile app). This makes it significantly more difficult for attackers to gain unauthorized access, even if they manage to obtain the password through brute force or other methods. Implementing 2FA can greatly reduce the risk of unauthorized access to sensitive systems and information.
