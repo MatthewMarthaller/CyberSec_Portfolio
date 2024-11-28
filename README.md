@@ -11,3 +11,5 @@ This repository contains the projects developed as part of the Google Cybersecur
 - [OS Hardening - Attack Analysis](OSHardening.md) {From Course Three, Module Four}
 - [Network Hardening - Post-Data Breach Analysis](NetworkHardening.md) {From Course Three, Module Four}
 - [NIST Security Incident Report](NIST_Framework.md) {From Course Three, Module Four}
+- [Using Linux to Manage File Permissions](LinuxPermissions.md) {From Course Four, Module Three}
+- 
